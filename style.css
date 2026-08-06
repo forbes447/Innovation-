@@ -1,0 +1,205 @@
+/* Core Layout Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+/* --- PERSISTENT BACKGROUND WATERMARK ARCHITECTURE --- */
+.global-background-img {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+    opacity: 0.35; /* Becomes a beautiful premium background hallmark overlay across all panels */
+}
+
+.global-background-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.85) 100%),
+                linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.9));
+    z-index: -1;
+}
+
+/* Minimal Top Navigation */
+.navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    z-index: 10;
+}
+
+.logo { font-size: 24px; font-weight: bold; color: #fff; }
+.nav-links a { color: rgba(255, 255, 255, 0.7); text-decoration: none; margin: 0 15px; font-size: 14px; font-weight: 500; transition: color 0.3s; }
+.nav-links a:hover { color: #fff; }
+.btn-login { background: transparent; border: none; color: #fff; font-size: 14px; font-weight: 600; cursor: pointer; padding: 8px 16px; }
+
+/* View Infrastructure System */
+.app-view { display: none; width: 100%; min-height: 100vh; background: transparent; }
+.app-view.active-view { display: flex; }
+
+/* Hero Section */
+.hero-container { justify-content: center; align-items: center; text-align: center; padding: 0 20px; width: 100%; }
+.hero-content { max-width: 650px; margin-top: 40px; }
+.badge-tag { display: inline-block; font-size: 11px; font-weight: 800; letter-spacing: 1.5px; color: #ff3b30; background: rgba(255, 59, 48, 0.15); padding: 6px 16px; border-radius: 20px; margin-bottom: 20px; border: 1px solid rgba(255, 59, 48, 0.3); }
+.hero-title { font-size: 64px; font-weight: 700; letter-spacing: -2px; line-height: 1.05; margin-bottom: 20px; }
+.hero-title .dot { color: rgba(255, 255, 255, 0.3); }
+.hero-subtitle { font-size: 16px; line-height: 1.6; color: rgba(255, 255, 255, 0.85); margin-bottom: 35px; padding: 0 30px; }
+.cta-group { display: flex; justify-content: center; gap: 15px; }
+
+.btn-primary, .btn-secondary { padding: 14px 28px; font-size: 14px; font-weight: 600; border-radius: 30px; cursor: pointer; transition: transform 0.2s, background 0.3s; border: none; min-width: 180px; text-align: center; }
+.btn-primary { background: #e31937; color: #fff; }
+.btn-primary:hover { background: #b91329; transform: translateY(-2px); }
+.btn-secondary { background: rgba(255, 255, 255, 0.12); color: #fff; backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.2); }
+.btn-secondary:hover { background: rgba(255, 255, 255, 0.22); transform: translateY(-2px); }
+
+/* Registration and Login Card Layouts */
+.auth-container { justify-content: center; align-items: center; padding: 80px 20px 40px 20px; }
+.auth-card { background: #121214; border: 1px solid rgba(255, 255, 255, 0.08); width: 100%; max-width: 450px; padding: 40px; border-radius: 16px; box-shadow: 0 20px 40px rgba(0,0,0,0.6); }
+.auth-card h2 { font-size: 28px; font-weight: 700; letter-spacing: -0.5px; margin-bottom: 10px; }
+.auth-lead { color: rgba(255,255,255,0.6); font-size: 14px; margin-bottom: 30px; }
+.input-group { margin-bottom: 20px; text-align: left; }
+.input-group label { display: block; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; color: rgba(255,255,255,0.5); margin-bottom: 8px; }
+.input-group input { width: 100%; padding: 14px; background: #1c1c1e; border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; color: #fff; font-size: 15px; }
+.input-group input:focus { outline: none; border-color: #e31937; }
+.full-width-btn { width: 100%; margin-top: 10px; }
+.auth-footer { font-size: 13px; color: rgba(255,255,255,0.5); margin-top: 25px; text-align: center; }
+.accent-text { color: #e31937; cursor: pointer; font-weight: 600; }
+
+/* Market Terminal Layout */
+.market-container { justify-content: center; align-items: flex-start; padding: 100px 40px 40px 40px; }
+.market-wrapper { width: 100%; max-width: 1100px; margin: 0 auto; }
+.market-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 20px; }
+.market-header h2 { font-size: 32px; font-weight: 700; letter-spacing: -1px; }
+.subtext { color: rgba(255,255,255,0.5); font-size: 14px; }
+.live-pulse { font-size: 12px; font-weight: 700; color: #34c759; background: rgba(52, 199, 89, 0.1); padding: 6px 12px; border-radius: 6px; }
+
+/* Dashboard Card Elements Grid Setup */
+.metrics-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-bottom: 30px; width: 100%; }
+.dynamic-vertical-stack { grid-template-columns: 1fr; } /* Stacked structure ensures clean view alignments */
+.metric-card { background: #121214; border: 1px solid rgba(255, 255, 255, 0.08); padding: 24px; border-radius: 12px; text-align: left; }
+.profit-border { border-left: 4px solid #34c759; }
+.card-label { font-size: 12px; color: rgba(255,255,255,0.4); display: block; margin-bottom: 8px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }
+.metric-card h3 { font-size: 28px; font-weight: 700; margin-bottom: 6px; }
+.trend { font-size: 12px; font-weight: 600; }
+.trend.up { color: #34c759; }
+.trend.down { color: #ff3b30; }
+.trend.static { color: rgba(255,255,255,0.4); }
+
+/* Main Member Portal */
+.portal-container { justify-content: center; align-items: flex-start; padding: 110px 40px 40px 40px; }
+.portal-wrapper { width: 100%; max-width: 1000px; margin: 0 auto; display: flex; flex-direction: column; gap: 25px; }
+
+/* Portal Header Layout Fix (Prevents elements overlap seen on mobile viewport) */
+.portal-header { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.08); padding-bottom: 20px; gap: 20px; flex-wrap: wrap; }
+.portal-title-block { flex-grow: 1; }
+#btn-logout { min-width: 120px; padding: 10px 20px; border-radius: 20px; }
+.highlight-text { color: #e31937; font-weight: 600; }
+.balance-card h2 { font-size: 38px; font-weight: 700; letter-spacing: -1px; margin-bottom: 4px; }
+.text-green { color: #34c759 !important; }
+
+/* Dashboard Actions */
+.portal-actions { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 15px; }
+.action-btn { background: #121214; border: 1px solid rgba(255,255,255,0.08); padding: 20px; border-radius: 12px; color: #fff; font-size: 16px; font-weight: 600; text-align: left; cursor: pointer; transition: background 0.2s, border-color 0.2s; display: flex; align-items: center; gap: 15px; }
+.action-btn:hover { background: #1c1c1e; border-color: rgba(255, 255, 255, 0.2); }
+.action-btn .icon { font-size: 20px; display: inline-block; background: rgba(255,255,255,0.05); padding: 8px 14px; border-radius: 8px; color: #e31937; }
+
+/* Modals Framework */
+.portal-modal { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.85); z-index: 100; display: flex; justify-content: center; align-items: center; padding: 20px; backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); }
+.portal-modal.hidden-modal { display: none; }
+.modal-card { background: #121214; border: 1px solid rgba(255,255,255,0.12); border-radius: 16px; padding: 35px; width: 100%; max-width: 480px; text-align: center; box-shadow: 0 25px 50px rgba(0,0,0,0.8); }
+.modal-card.wide-card { max-width: 800px; text-align: left; }
+.modal-card h3 { font-size: 24px; margin-bottom: 15px; font-weight: 700; letter-spacing: -0.5px; }
+.modal-instruction { color: rgba(255,255,255,0.6); font-size: 14px; margin-bottom: 25px; line-height: 1.5; text-align: left; }
+
+/* BTC Address Box */
+.btc-address-container { display: flex; background: #1c1c1e; border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 6px; margin-bottom: 20px; align-items: center; }
+.btc-address-container input { background: transparent; border: none; color: #fff; flex-grow: 1; padding: 10px; font-size: 13px; font-family: monospace; outline: none; }
+.btc-address-container button { background: #e31937; border: none; color: #fff; font-weight: 600; padding: 10px 20px; border-radius: 6px; cursor: pointer; }
+
+/* Tables Layout Component */
+.table-container { width: 100%; overflow-x: auto; background: #0c0c0e; border: 1px solid rgba(255,255,255,0.06); border-radius: 12px; }
+.data-table { width: 100%; border-collapse: collapse; text-align: left; font-size: 14px; min-width: 500px; }
+.data-table th, .data-table td { padding: 16px 20px; border-bottom: 1px solid rgba(255,255,255,0.04); }
+.data-table th { background: rgba(255,255,255,0.01); color: rgba(255,255,255,0.4); font-weight: 600; font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; }
+.status-pill { padding: 4px 10px; border-radius: 4px; font-size: 11px; font-weight: 700; }
+.status-pill.active { background: rgba(52,199,89,0.15); color: #34c759; }
+.status-msg { font-size: 13px; font-weight: 600; margin-bottom: 15px; height: 18px; }
+
+/* Mobile Formatting Configuration */
+@media (max-width: 768px) {
+    .navbar { padding: 20px; }
+    .nav-links { display: none; }
+    .hero-title { font-size: 42px; }
+    .hero-subtitle { font-size: 14px; padding: 0; }
+    .cta-group { flex-direction: column; align-items: center; width: 100%; }
+    .btn-primary, .btn-secondary { width: 90%; max-width: 280px; }
+    .market-container, .portal-container { padding: 90px 15px 40px 15px; }
+    .auth-card, .modal-card { padding: 24px; }
+    .portal-actions { grid-template-columns: 1fr; }
+    .balance-card h2 { font-size: 30px; }
+    
+/* Force the car to the background and make views transparent */
+.hero-container-fixed {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0 !important;
+    pointer-events: none;
+}
+
+/* Remove solid black backgrounds blocking the car */
+body, html, .app-view, #view-home {
+    background-color: transparent !important;
+}
+
+/* Make sure content sits beautifully on top of the car */
+.navbar, .hero-content, .auth-container, .portal-container {
+    position: relative;
+    z-index: 5;
+}
+/* Force the car to the background and make views transparent */
+.hero-container-fixed {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0 !important;
+    pointer-events: none;
+}
+
+/* Remove solid black backgrounds blocking the car */
+body, html, .app-view, #view-home {
+    background-color: transparent !important;
+}
+
+/* Make sure content sits beautifully on top of the car */
+.navbar, .hero-content, .auth-container, .portal-container {
+    position: relative;
+    z-index: 5;
+}

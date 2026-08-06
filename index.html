@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Invest in Innovation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Global Background Watermark Structure -->
+    <div class="global-background-overlay"></div>
+    <img src="https://images.unsplash.com/photo-1617788138017-80ad40651399?auto=format&fit=crop&q=80&w=1800" alt="Watermark Background" class="global-background-img">
+
+    <!-- Header Navigation -->
+    <header class="navbar">
+        <div class="logo" id="nav-logo" style="cursor: pointer;">𝄚</div>
+        <nav class="nav-links">
+            <a href="#" class="nav-home-btn">Home</a>
+            <a href="#">Legal</a>
+            <a href="#">Support</a>
+            <a href="#" class="nav-market-btn">Analysis</a>
+            <a href="#">Company</a>
+        </nav>
+        <div class="nav-auth">
+            <button class="btn-login" id="nav-login-btn">Log In</button>
+        </div>
+    </header>
+
+    <!-- SECTION 1: HERO HOME VIEW -->
+    <section id="view-home" class="hero-container app-view active-view">
+        <div class="hero-content">
+            <span class="badge-tag">FUTURE OF FINANCE</span>
+            <h1 class="hero-title">
+                Invest in<br>Innovation<span class="dot">.</span>
+            </h1>
+            <p class="hero-subtitle">
+                Join the world's most advanced financial ecosystem. Secure, automated, and powered by AI-driven market analysis.
+            </p>
+            <div class="cta-group">
+                <button class="btn-primary" id="open-account-btn">Open Free Account</button>
+                <button class="btn-secondary" id="view-market-btn">View Market Data</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 2: REGISTRATION GATE -->
+    <section id="view-register" class="auth-container app-view">
+        <div class="auth-card">
+            <h2>Create Institutional Account</h2>
+            <p class="auth-lead">Get instant access to advanced liquidity and automated asset management tools.</p>
+            
+            <form id="register-form">
+                <div class="input-group">
+                    <label>Full Legal Name</label>
+                    <input type="text" id="reg-name" placeholder="John Doe" required>
+                </div>
+                <div class="input-group">
+                    <label>Email Address</label>
+                    <input type="email" id="reg-email" placeholder="name@domain.com" required>
+                </div>
+                <div class="input-group">
+                    <label>Phone Number</label>
+                    <input type="tel" id="reg-phone" placeholder="8012345678" required>
+                </div>
+                <div class="input-group">
+                    <label>Password</label>
+                    <input type="password" id="reg-pass" placeholder="Create secure password" required>
+                </div>
+                <button type="submit" class="btn-primary full-width-btn">Complete Setup</button>
+            </form>
+            <p class="auth-footer">Already have an account? <span class="accent-text switch-to-login">Log In</span></p>
+        </div>
+    </section>
+
+    <!-- SECTION 3: LOGIN GATE -->
+    <section id="view-login" class="auth-container app-view">
+        <div class="auth-card">
+            <h2>Access Portal</h2>
+            <p class="auth-lead">Verify credentials to initialize your private dashboard instance.</p>
+            
+            <form id="login-form">
+                <div class="input-group">
+                    <label>Email Address</label>
+                    <input type="email" id="login-email" placeholder="name@domain.com" required>
+                </div>
+                <div class="input-group">
+                    <label>Password</label>
+                    <input type="password" id="login-pass" placeholder="Enter password" required>
+                </div>
+                <button type="submit" class="btn-primary full-width-btn">Unlock Secure Terminal</button>
+            </form>
+            <p class="auth-footer">Need an account? <span class="accent-text switch-to-register">Register here</span></p>
+        </div>
+    </section>
+
+    <!-- SECTION 4: MARKET DATA VIEW -->
+    <section id="view-market" class="market-container app-view">
+        <div class="market-wrapper">
+            <div class="market-header">
+                <div>
+                    <h2>Live Terminal</h2>
+                    <p class="subtext">Real-time global asset monitoring and computational yields.</p>
+                </div>
+                <span class="live-pulse">● LIVE DATA</span>
+            </div>
+
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <span class="card-label">Asset Liquidity Index</span>
+                    <h3>$42.8B</h3>
+                    <span class="trend up">+14.2%</span>
+                </div>
+                <div class="metric-card">
+                    <span class="card-label">Target Return Velocity</span>
+                    <h3>50.0% Expected</h3>
+                    <span class="trend up">Optimized</span>
+                </div>
+                <div class="metric-card">
+                    <span class="card-label">Network Processing Fee</span>
+                    <h3>0.00%</h3>
+                    <span class="trend static">Fixed Tier</span>
+                </div>
+            </div>
+
+            <div class="table-container">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Ticker</th>
+                            <th>Asset Platform</th>
+                            <th>Current Valuation</th>
+                            <th>24h Volatility</th>
+                            <th>Deployment Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td><strong>BTC</strong></td><td>Bitcoin Core Asset</td><td>$94,210.50</td><td class="trend up">+4.8%</td><td><span class="status-pill active">Available</span></td></tr>
+                        <tr><td><strong>ETH</strong></td><td>Ethereum Smart Contract</td><td>$3,420.15</td><td class="trend down">-1.2%</td><td><span class="status-pill active">Available</span></td></tr>
+                        <tr><td><strong>USDT</strong></td><td>Stable Escrow Vault</td><td>$1.00</td><td class="trend static">0.0%</td><td><span class="status-pill active">Available</span></td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <button class="btn-primary back-to-home-btn" style="margin-top: 25px;">Return to Terminal Homepage</button>
+        </div>
+    </section>
+
+    <!-- SECTION 5: USER INTRADAY PORTAL -->
+    <section id="view-portal" class="portal-container app-view">
+        <div class="portal-wrapper">
+            
+            <!-- Welcome Header (Fixed mobile layout stacking to prevent text collision) -->
+            <div class="portal-header">
+                <div class="portal-title-block">
+                    <h1>System Dashboard</h1>
+                    <p class="subtext">Welcome back, <span id="user-display-name" class="highlight-text">Investor</span></p>
+                </div>
+                <button class="btn-secondary" id="btn-logout">Disconnect</button>
+            </div>
+
+            <!-- Financial Capital Cards (Reordered: Profits explicitly on Top, Invested Capital on Bottom) -->
+            <div class="metrics-grid dynamic-vertical-stack">
+                <div class="metric-card balance-card profit-border">
+                    <span class="card-label">Accrued Interest (Profits)</span>
+                    <h2 class="portal-balance text-green" id="display-profits">$0.00</h2>
+                    <span class="trend up">Compounding</span>
+                </div>
+                <div class="metric-card balance-card">
+                    <span class="card-label">Total Amount Invested</span>
+                    <h2 class="portal-balance" id="display-invested">$0.00</h2>
+                    <span class="trend up">Active Yielding</span>
+                </div>
+            </div>
+
+            <!-- Dashboard Action Center -->
+            <div class="portal-actions">
+                <button class="action-btn btn-deposit" id="action-deposit">
+                    <span class="icon">↓</span> Add Money
+                </button>
+                <button class="action-btn btn-withdraw" id="action-withdraw">
+                    <span class="icon">↑</span> Request Withdrawal
+                </button>
+                <button class="action-btn btn-history" id="action-history">
+                    <span class="icon">☱</span> View Transaction History
+                </button>
+            </div>
+
+            <!-- DYNAMIC MODALS -->
+            <div id="modal-deposit" class="portal-modal hidden-modal">
+                <div class="modal-card">
+                    <h3>Fund Secure Account</h3>
+                    <p class="modal-instruction">Transfer BTC liquidity tokens to the assigned institutional nodes below:</p>
+                    <div class="btc-address-container">
+                        <input type="text" id="btc-address-field" value="bc1qxy2kgdygjrsqtzqhy0qfwdn3a623vdxgrww2et" readonly>
+                        <button id="btn-copy-btc">Copy</button>
+                    </div>
+                    <p id="copy-status-message" class="status-msg text-green"></p>
+                    <button class="btn-secondary close-modal-btn">Close Panel</button>
+                </div>
+            </div>
+
+            <!-- Updated Transaction History Modal -->
+            <div id="modal-history" class="portal-modal hidden-modal">
+                <div class="modal-card wide-card">
+                    <h3>Ledger Transaction History</h3>
+                    <div class="table-container">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Reference ID</th>
+                                    <th>Description</th>
+                                    <th>Amount (USD)</th>
+                                    <th>Timestamp</th>
+                                    <th>Status Verification</th>
+                                </tr>
+                            </thead>
+                            <tbody id="transaction-history-rows">
+                                <!-- Generated Dynamically by JS Engine to align perfectly -->
+                            </tbody>
+                        </table>
+                    </div>
+                    <button class="btn-secondary close-modal-btn" style="margin-top: 20px;">Return to Terminal</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+</body>
+</html>
