@@ -3,8 +3,8 @@
 // Edit these below to change values instantly
 // ==========================================
 const PORTAL_CONFIG = {
-    INVESTMENT_BALANCE: "1,000.00",
-    ACCRUED_PROFITS: "2,000.00",
+    INVESTMENT_BALANCE: "0.00",
+    ACCRUED_PROFITS: "0.00",
     WALLET_ADDRESS: "bc1q2gghcd7dxu0m5clpz4rscyz60naa7jal3prq7z"
 };
 
